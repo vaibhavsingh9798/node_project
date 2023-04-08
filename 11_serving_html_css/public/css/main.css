@@ -1,0 +1,15 @@
+.error{
+    color: brown;
+}
+.success{
+    color: green;
+}
+.form{
+    background-color: aquamarine;
+}
+.head{
+    display: flex;
+    justify-content: center;
+   align-items:flex-end
+    
+}
