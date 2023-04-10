@@ -16,13 +16,18 @@ exports.getAddProduct = (req, res, next) => {
   }
 
   exports.getShopProduct = (req, res, next) => {
-    let products = Product.fetchAll()
-    res.render('shop', {
-      prods: products,
-      pageTitle: 'Shop',
-      path: '/',
-      hasProducts: products.length > 0,
-      activeShop: true,
-      productCSS: true
-    });
+   // let products =
+     Product.fetchAll((products) =>{
+       
+      res.render('shop', {
+        prods: products,
+        pageTitle: 'Shop',
+        path: '/',
+        hasProducts: products.length > 0,
+        activeShop: true,
+        productCSS: true
+      });
+
+     })
+   
   }
